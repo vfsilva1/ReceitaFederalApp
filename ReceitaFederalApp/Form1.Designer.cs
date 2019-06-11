@@ -41,6 +41,12 @@
             this.Telefone = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.Logradouro = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Numero = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Bairro = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textCNPJ
@@ -66,7 +72,6 @@
             // 
             this.nomeEmpresa.Location = new System.Drawing.Point(13, 71);
             this.nomeEmpresa.Name = "nomeEmpresa";
-            this.nomeEmpresa.ReadOnly = true;
             this.nomeEmpresa.Size = new System.Drawing.Size(248, 20);
             this.nomeEmpresa.TabIndex = 2;
             // 
@@ -92,7 +97,6 @@
             // 
             this.nomeFantasia.Location = new System.Drawing.Point(280, 71);
             this.nomeFantasia.Name = "nomeFantasia";
-            this.nomeFantasia.ReadOnly = true;
             this.nomeFantasia.Size = new System.Drawing.Size(248, 20);
             this.nomeFantasia.TabIndex = 6;
             // 
@@ -100,7 +104,6 @@
             // 
             this.Municipio.Location = new System.Drawing.Point(13, 121);
             this.Municipio.Name = "Municipio";
-            this.Municipio.ReadOnly = true;
             this.Municipio.Size = new System.Drawing.Size(248, 20);
             this.Municipio.TabIndex = 8;
             // 
@@ -117,7 +120,6 @@
             // 
             this.UF.Location = new System.Drawing.Point(280, 121);
             this.UF.Name = "UF";
-            this.UF.ReadOnly = true;
             this.UF.Size = new System.Drawing.Size(248, 20);
             this.UF.TabIndex = 10;
             // 
@@ -132,16 +134,15 @@
             // 
             // Telefone
             // 
-            this.Telefone.Location = new System.Drawing.Point(15, 170);
+            this.Telefone.Location = new System.Drawing.Point(15, 218);
             this.Telefone.Name = "Telefone";
-            this.Telefone.ReadOnly = true;
             this.Telefone.Size = new System.Drawing.Size(248, 20);
             this.Telefone.TabIndex = 12;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 154);
+            this.label3.Location = new System.Drawing.Point(12, 202);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 11;
@@ -155,12 +156,68 @@
             this.button1.TabIndex = 13;
             this.button1.Text = "SALVAR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.salvarDados);
+            // 
+            // Logradouro
+            // 
+            this.Logradouro.Location = new System.Drawing.Point(15, 168);
+            this.Logradouro.Name = "Logradouro";
+            this.Logradouro.Size = new System.Drawing.Size(248, 20);
+            this.Logradouro.TabIndex = 15;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 152);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Logradouro";
+            // 
+            // Numero
+            // 
+            this.Numero.Location = new System.Drawing.Point(280, 168);
+            this.Numero.Name = "Numero";
+            this.Numero.Size = new System.Drawing.Size(248, 20);
+            this.Numero.TabIndex = 17;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(277, 152);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Numero";
+            // 
+            // Bairro
+            // 
+            this.Bairro.Location = new System.Drawing.Point(540, 168);
+            this.Bairro.Name = "Bairro";
+            this.Bairro.Size = new System.Drawing.Size(248, 20);
+            this.Bairro.TabIndex = 19;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(537, 152);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(34, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Bairro";
             // 
             // ConsultaCNPJ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Bairro);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.Numero);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.Logradouro);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Telefone);
             this.Controls.Add(this.label3);
@@ -196,6 +253,12 @@
         private System.Windows.Forms.TextBox Telefone;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox Logradouro;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox Numero;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox Bairro;
+        private System.Windows.Forms.Label label7;
     }
 }
 
