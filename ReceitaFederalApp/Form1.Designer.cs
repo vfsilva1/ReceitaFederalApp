@@ -1,6 +1,6 @@
 ﻿namespace ReceitaFederalApp
 {
-    partial class Form1
+    partial class ConsultaCNPJ
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -31,6 +31,7 @@
             this.textCNPJ = new System.Windows.Forms.TextBox();
             this.consultarCNPJ = new System.Windows.Forms.Button();
             this.resultadoConsulta = new System.Windows.Forms.TextBox();
+            this.btnCreateDataBase = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textCNPJ
@@ -60,15 +61,26 @@
             this.resultadoConsulta.Size = new System.Drawing.Size(775, 389);
             this.resultadoConsulta.TabIndex = 2;
             // 
-            // Form1
+            // btnCreateDataBase
+            // 
+            this.btnCreateDataBase.Location = new System.Drawing.Point(690, 9);
+            this.btnCreateDataBase.Name = "btnCreateDataBase";
+            this.btnCreateDataBase.Size = new System.Drawing.Size(97, 23);
+            this.btnCreateDataBase.TabIndex = 3;
+            this.btnCreateDataBase.Text = "Criar Banco";
+            this.btnCreateDataBase.UseVisualStyleBackColor = true;
+            this.btnCreateDataBase.Click += new System.EventHandler(this.createDataBase);
+            // 
+            // ConsultaCNPJ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCreateDataBase);
             this.Controls.Add(this.resultadoConsulta);
             this.Controls.Add(this.consultarCNPJ);
             this.Controls.Add(this.textCNPJ);
-            this.Name = "Form1";
+            this.Name = "ConsultaCNPJ";
             this.Text = "Consulta Empresa";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -80,6 +92,7 @@
         private System.Windows.Forms.TextBox textCNPJ;
         private System.Windows.Forms.Button consultarCNPJ;
         private System.Windows.Forms.TextBox resultadoConsulta;
+        private System.Windows.Forms.Button btnCreateDataBase;
     }
 }
 
