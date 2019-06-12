@@ -34,7 +34,12 @@ namespace ReceitaFederalApp
         {
             if (cnpj.Length != 14)
                 MessageBox.Show("CNPJ Inválido!", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            
+
+            if (empresa.Select(empresa) == null)
+                MessageBox.Show("Empresa ainda não cadastrada!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+                MessageBox.Show("Empresa já cadastrada no Banco de Dados.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             try
             {
                 using (var webClient = new WebClient())
@@ -101,5 +106,24 @@ namespace ReceitaFederalApp
                 MessageBox.Show("Falha ao cadastrar a Empresa!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
+
+        private void deletarDados(object sender, EventArgs e)
+        {
+            empresa.Nome = nomeEmpresa.Text;
+            empresa.Fantasia = nomeFantasia.Text;
+            empresa.Municipio = Municipio.Text;
+            empresa.UF = UF.Text;
+            empresa.Telefone = Telefone.Text;
+            empresa.Logradouro = Logradouro.Text;
+            empresa.Numero = Numero.Text;
+            empresa.Bairro = Bairro.Text;
+
+            bool succes = empresa.Delete(empresa);
+            if(succes == true)
+                MessageBox.Show("Empresa deletada com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else //falha ao inserir
+                MessageBox.Show("Falha ao deletar a Empresa!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
     }
 }

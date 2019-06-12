@@ -24,7 +24,7 @@ namespace ReceitaFederalApp
         static string myConnString = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
 
         //Select (READ)
-        public DataTable Select()
+        public DataTable Select(Empresa empresa)
         {
             //conexao com o banco
             SqlConnection conn = new SqlConnection(myConnString);
@@ -32,8 +32,9 @@ namespace ReceitaFederalApp
             try
             {
                 //escrevendo Query SQL
-                string sql = "SELECT * FROM tbl_empresa";
+                string sql = "SELECT * FROM tbl_empresa WHERE nome == @nome";
                 SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@nome", empresa.Nome);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
 
                 conn.Open();

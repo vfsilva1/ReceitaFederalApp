@@ -47,6 +47,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Bairro = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.Delete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textCNPJ
@@ -206,12 +207,23 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "Bairro";
             // 
+            // Delete
+            // 
+            this.Delete.Location = new System.Drawing.Point(114, 265);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(75, 23);
+            this.Delete.TabIndex = 20;
+            this.Delete.Text = "DELETAR";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.deletarDados);
+            // 
             // ConsultaCNPJ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Delete);
             this.Controls.Add(this.Bairro);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Numero);
@@ -259,6 +271,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox Bairro;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button Delete;
     }
 }
 
